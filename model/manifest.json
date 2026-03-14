@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Review Insights",
+  "version": "1.0",
+  "description": "Analyze Amazon reviews",
+
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+
+  "host_permissions": [
+    "https://www.amazon.*/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
