@@ -1,0 +1,1 @@
+import{t as e}from"./chunk-BawyB3wE.js";var t=e((()=>{chrome.runtime.onInstalled.addListener(()=>{console.log(`Review Insights installed`)})}));export default t();
